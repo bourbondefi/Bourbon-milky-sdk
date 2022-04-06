@@ -16,7 +16,7 @@ var _SOLIDITY_TYPE_MAXIMA;
 var ChainId;
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 70] = "MAINNET";
+  ChainId[ChainId["MAINNET"] = 2001] = "MAINNET";
   ChainId[ChainId["BSCTESTNET"] = 97] = "BSCTESTNET";
 })(ChainId || (ChainId = {}));
 
@@ -35,8 +35,8 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0x3620313f3a1719a79CF7989DEa2fe46c1677e7db';
-var INIT_CODE_HASH = '0x4ce4f6dd91fdf349c2e1228a7c86f768e2d5be620fb68cb0fe054b06c0a89220';
+var FACTORY_ADDRESS = '0x77E82a8173e97fa31644E53fad4FA583936577F4';
+var INIT_CODE_HASH = '0x7a7a5ecabbc99813a1cd8a7b882d1c5fd65059aa9ee934dc287725c1a82a3f12';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -369,7 +369,7 @@ function Currency(decimals, symbol, name) {
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'SDX', 'SDX');
+Currency.ETHER = /*#__PURE__*/new Currency(18, 'ADA', 'ADA');
 var ETHER = Currency.ETHER;
 
 var _WETH;
@@ -435,7 +435,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xDc5F0F2DB641B8109B40e21D029db0C4964800A9', 18, 'WSDX', 'Wrapped SDX'), _WETH[ChainId.BSCTESTNET] = /*#__PURE__*/new Token(ChainId.BSCTESTNET, '0xaE8E19eFB41e7b96815649A6a60785e1fbA84C1e', 18, 'WBNB', 'Wrapped BNB'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xAE83571000aF4499798d1e3b0fA0070EB3A3E3F9', 18, 'WADA', 'Wrapped ADA'), _WETH[ChainId.BSCTESTNET] = /*#__PURE__*/new Token(ChainId.BSCTESTNET, '0xaE8E19eFB41e7b96815649A6a60785e1fbA84C1e', 18, 'WBNB', 'Wrapped BNB'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
